@@ -12,6 +12,9 @@ class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
 
     @IBAction func closePressed(_ sender: Any) {
@@ -19,5 +22,8 @@ class LoginVC: UIViewController {
     }
     @IBAction func createAccntBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: nil)
+    }
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
     }
 }
