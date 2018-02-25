@@ -25,6 +25,13 @@ class CreateAccountVC: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDataService.instance.avatarName != "" {
+            userImg.image = UIImage(named: UserDataService.instance.avatarName)
+            avatarName = UserDataService.instance.avatarName
+        }
+    }
 
     @IBAction func closePressed(_ sender: Any) {
         performSegue(withIdentifier: UNWIND, sender: nil)
@@ -52,6 +59,7 @@ class CreateAccountVC: UIViewController {
     }
  
     @IBAction func pickAvatarPressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_AVATAR_PICKER, sender: nil)
     }
     
     @IBAction func pickBGColorPressed(_ sender: Any) {
