@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVCViewController" customModule="Smack" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="zkW-2N-wd8" id="t0p-f9-Mgu"/>
+                <outlet property="profileImg" destination="jaM-A7-hVP" id="Tgn-2M-o0P"/>
+                <outlet property="userEmail" destination="03J-9m-HQa" id="rFd-bX-KJH"/>
+                <outlet property="userName" destination="cU9-dq-SGR" id="v9S-EH-vfK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zkW-2N-wd8" userLabel="bgView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AlS-b3-uhF">
+                    <rect key="frame" x="20" y="153.5" width="335" height="360"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="jsM-Bc-5kU">
+                            <rect key="frame" x="104.5" y="55" width="126" height="210.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOn-Vz-qEQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="126" height="27.5"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                    <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="jaM-A7-hVP" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
+                                    <rect key="frame" x="13" y="41.5" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="6uB-6b-zTb"/>
+                                        <constraint firstAttribute="width" constant="100" id="KhZ-wd-NoN"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JonnyB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU9-dq-SGR">
+                                    <rect key="frame" x="33" y="155.5" width="60" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                    <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jonny@dev.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03J-9m-HQa">
+                                    <rect key="frame" x="1.5" y="190" width="123" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                    <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSD-xc-BDo">
+                            <rect key="frame" x="299" y="8" width="28" height="28"/>
+                            <state key="normal" image="closeButton"/>
+                            <connections>
+                                <action selector="closeModalPressed:" destination="-1" eventType="touchUpInside" id="S1m-bL-BnE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SD-Q4-mbb">
+                            <rect key="frame" x="133" y="316" width="68" height="36"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                            <state key="normal" title="Logout">
+                                <color key="titleColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="logoutPressed:" destination="-1" eventType="touchUpInside" id="e3E-tW-xJP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="QSD-xc-BDo" firstAttribute="top" secondItem="AlS-b3-uhF" secondAttribute="top" constant="8" id="0vl-qJ-hEu"/>
+                        <constraint firstAttribute="bottom" secondItem="4SD-Q4-mbb" secondAttribute="bottom" constant="8" id="73W-tl-Qgl"/>
+                        <constraint firstItem="jsM-Bc-5kU" firstAttribute="centerY" secondItem="AlS-b3-uhF" secondAttribute="centerY" constant="-20" id="IxH-0n-22F"/>
+                        <constraint firstItem="4SD-Q4-mbb" firstAttribute="centerX" secondItem="AlS-b3-uhF" secondAttribute="centerX" id="JXZ-9X-xtm"/>
+                        <constraint firstAttribute="trailing" secondItem="QSD-xc-BDo" secondAttribute="trailing" constant="8" id="gYH-fd-rE1"/>
+                        <constraint firstAttribute="height" constant="360" id="wFb-GW-UxU"/>
+                        <constraint firstItem="jsM-Bc-5kU" firstAttribute="centerX" secondItem="AlS-b3-uhF" secondAttribute="centerX" id="yEb-LR-f2l"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="AlS-b3-uhF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2mY-MS-zAh"/>
+                <constraint firstItem="zkW-2N-wd8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3MY-PZ-apy"/>
+                <constraint firstItem="AlS-b3-uhF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="CeY-Hp-sg1"/>
+                <constraint firstAttribute="trailing" secondItem="AlS-b3-uhF" secondAttribute="trailing" constant="20" id="UnI-Nn-ddM"/>
+                <constraint firstItem="AlS-b3-uhF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Ygi-h9-Rpf"/>
+                <constraint firstAttribute="trailing" secondItem="zkW-2N-wd8" secondAttribute="trailing" id="cxH-vd-yMN"/>
+                <constraint firstItem="zkW-2N-wd8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ecI-jR-Pe1"/>
+                <constraint firstAttribute="bottom" secondItem="zkW-2N-wd8" secondAttribute="bottom" id="gDa-9T-PiU"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeButton" width="28" height="28"/>
+        <image name="profileDefault" width="192" height="192"/>
+    </resources>
+</document>
