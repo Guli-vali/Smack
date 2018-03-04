@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Smack/Controller/ChatVC.swift"
-            timestampString = "541880702.483193"
+            timestampString = "541888043.638049"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "onLoginGetMessages()"
             landmarkType = "7">
          </BreakpointContent>
