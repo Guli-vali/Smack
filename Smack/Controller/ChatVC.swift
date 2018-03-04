@@ -50,18 +50,30 @@ class ChatVC: UIViewController {
     func updateWithChannel() {
         let channelName = MessageService.instance.selectedChannel?.channelTitle ?? ""
         channelNameLbl.text = "#\(channelName)"
-        // getMessages()
+        getMessages()
     }
     
     func onLoginGetMessages() {
         MessageService.instance.findAllChannel { (success) in
             if success {
-//                if MessageService.instance.channels.count > 0 {
-//                    MessageService.instance.selectedChannel = MessageService.instance.channels[0]
-//                    self.updateWithChannel()
+                if MessageService.instance.channels.count > 0 {
+                    MessageService.instance.selectedChannel = MessageService.instance.channels[0]
+                    self.updateWithChannel()
                 } else {
                     self.channelNameLbl.text = "No channels yet!"
                 }
             }
         }
+    }
+    
+    //reload tableview after successfully getting messages
+    func getMessages() {
+        guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+        MessageService.instance.findAllMessageForChannel(channelId: channelId) { (success) in
+            if success {
+                // self.tableView.reloadData()
+            }
+        }
+    }
 }
+
