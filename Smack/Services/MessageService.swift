@@ -16,6 +16,7 @@ class MessageService {
     
     var channels = [Channel]()
     var messages = [Message]()
+    var unreadChannels = [String]()
     var selectedChannel : Channel?
     
     func findAllChannel(complition: @escaping CompletionHandler){
@@ -44,7 +45,6 @@ class MessageService {
         Alamofire.request("\(URL_GET_MESSAGES)\(channelId)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             
             if response.result.error == nil {
-                print("------------->Hello from findAllMessageForChannel 1")
                 self.clearMessages()
                 guard let data = response.data else { return }
                 if let json = try! JSON(data: data).array {
@@ -64,7 +64,6 @@ class MessageService {
                     completion(true)
                 }
             } else {
-                print("------------->Hello from findAllMessageForChannel 2")
                 debugPrint(response.result.error as Any)
                 completion(false)
             }
